@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val fragmentTransaction = supportFragmentManager.beginTransaction()
             .add(R.id.fragmentContainerView, testFragment())
+            .add(R.id.fragmentContainerView2, testFragment())
             .commit()
 
     }

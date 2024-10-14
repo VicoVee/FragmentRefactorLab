@@ -29,9 +29,10 @@ class testFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val layout = inflater.inflate(R.layout.fragment_test, container, false)
-        val displayTextView = layout.findViewById<TextView>(R.id.displayTextView)
-        val nameEdit = layout.findViewById<TextView>(R.id.nameEditText)
-        val changeButton = layout.findViewById<Button>(R.id.changeButton).apply {
+
+        layout.findViewById<Button>(R.id.changeButton).apply {
+            val displayTextView = layout.findViewById<TextView>(R.id.displayTextView)
+            val nameEdit = layout.findViewById<TextView>(R.id.nameEditText)
             setOnClickListener {
                 var name = nameEdit.text
                 displayTextView.text = if (name.isNotBlank()) {
